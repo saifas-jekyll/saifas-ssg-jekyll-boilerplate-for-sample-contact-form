@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  <script src="../assets/scripts/script.js"></script>
+  <head>
+    <title>
+      {{ page.title }}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/styles/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <form
+      action="{{ site.usebasinUrl }}"
+      method="POST"
+      enctype="multipart/form-data"
+      id="form"
+    >
+      <div class="form__input">
+        <label for="name">Your Name</label>
+        <input type="text" name="name" />
+      </div>
+      <div class="form__input">
+        <label for="email">Your Email</label>
+        <input type="email" name="email" required />
+      </div>
+      <div class="form__input">
+        <label for="message">Your Message</label>
+        <textarea name="message"></textarea>
+      </div>
+      <button type="submit">Contact Us</button>
+    </form>
+  </body>
+</html>
